@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spinning Loader</title>
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #222;
-      margin: 0;
-    }
+   body{
+    background-color: #bcd4ef;
+   }
 
-    .loader {
+    /* .loader {
       border: 8px solid #444;
       border-top: 8px solid #00ffcc;
       border-radius: 50%;
@@ -26,10 +21,44 @@
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
+    } */
+    .cards {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+        justify-content: center;
     }
+    .cards .card{
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 200px;
+        text-align: center;
+    }
+@media screen and (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards .card {
+        width: 80%;
+    }
+    
+}
   </style>
 </head>
 <body>
   <div class="loader"></div>
+  <div class="cards">
+    <div class="card">
+        <h2>Card Title</h2>
+        <p>This is a sample card.</p>
+    </div>
+    <div class="card">
+        <h2>Card Title</h2>
+        <p>This is a sample card.</p>
+  </div>
 </body>
 </html>
